@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Player - Plyr Demo</title>
+    <link rel="stylesheet" type="text/css" href="lib/plyr.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="lib/plyr.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <video controls crossorigin playsinline poster="content/image/default.jpg" id="player">
+            <!-- Video files -->
+            <!-- https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4 - 1080,1440 -->
+            <source src="content/video/v1-240p.mp4" type="video/mp4" size="240">
+            <source src="content/video/v1-576p.mp4" type="video/mp4" size="576">
+
+            <!-- Audio File -->
+
+            <!-- <source src="content/audio/Hitman.mp3" type="audio/mp3"> -->
+
+            <!-- Caption files -->
+            <track kind="captions" label="English" srclang="en" src="content/caption/v1.en.vtt" default>
+            <track kind="captions" label="Français" srclang="fr" src="content/caption/v1.fr.vtt">
+
+            <!-- Fallback for browsers that don't support the <video> element -->
+            <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+        </video>
+          
+        <div class="actions">
+            <button type="button" class="btn js-play">Play</button>
+            <button type="button" class="btn js-pause">Pause</button>
+            <button type="button" class="btn js-stop">Stop</button>
+            <button type="button" class="btn js-rewind">Rewind</button>
+            <button type="button" class="btn js-forward">Forward</button>
+        </div>
+
+    </div>
+</body>
+</html>
